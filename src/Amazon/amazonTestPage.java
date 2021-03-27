@@ -9,19 +9,23 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.*; //We will be using TestNG to test Amazon
 
 public class amazonTestPage extends homepage{ //testClass extends homePage
 
-//    homepage home; //objectOfClass referenceName;
 
-    @Test
-    public void testSearchAmazon() throws InterruptedException{ //public void testName() throws InterruptedException{}
-        String expectedText = "Amazon.com";
-        driver.findElement(By.cssSelector("a.nav-a:nth-child(9)")).click();
-        driver.findElement(By.cssSelector("div.a-section:nth-child(15) > ul:nth-child(2) > li:nth-child(1) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)")).click();
-        String actualText = driver.getTitle();
-        Assert.assertEquals(actualText, expectedText, "Page Title not match");
+    @Test //Always need a @Test on top of method to verify this method will be used for testing purposes
+
+    public void testExample(){ //Public void testName+Description(){
+
+        checkSearchBox(); //Call the method you want to test
+
+        String expectedText = " enter expectText "; //Enter what you expect to be shown in your test results
+
+        String actualText = driver.getTitle(); //This will ask the driver (chrome) to verify the title of page
+
+        Assert.assertEquals(actualText, expectedText, "Page Title not match"); //Our result should be equal
+
 
     }
 
