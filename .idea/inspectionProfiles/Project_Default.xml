@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MissingFinalNewline" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="MisspelledHeader" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="CUSTOM_HEADERS">
+        <header value="Bnd-LastModified" />
+        <header value="Build-Date" />
+        <header value="Build-Time" />
+        <header value="Built-By" />
+        <header value="Bundle-Description" />
+        <header value="Bundle-License" />
+        <header value="Bundle-ManifestVersion" />
+        <header value="Bundle-Name" />
+        <header value="Bundle-SymbolicName" />
+        <header value="Bundle-Version" />
+        <header value="Export-Package" />
+        <header value="Require-Capability" />
+        <header value="Tool" />
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
