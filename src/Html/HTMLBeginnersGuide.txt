@@ -9,7 +9,7 @@ A markup language is used to define the text document within tag which defines t
 HTML is a markup language that is used by the browser to manipulate text, images, and other content
 to display it in the required format.
 
-****** Why You Should Use HTML? ************************************************************************************
+****** Why You Should Use HTML? ****************************************************************************************
 
 HTML helps to structure our website well.
 
@@ -47,7 +47,7 @@ Basic Format: It is the basic format of create a simple web page.
 
 </html>
 
-****** Basic HTML Tags To Learn ****************************************************************************************************
+****** Basic HTML Tags To Learn ****************************************************************************************
 
 Example: Let’s See A Small Example of A Simple HTML Page
 
