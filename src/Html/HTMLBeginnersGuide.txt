@@ -28,17 +28,22 @@ Basic Format: It is the basic format of create a simple web page.
 
 ****** A Few Heads Up **************************************************************************************************
 
-HTML
 <!DOCTYPE html>
+
 <html>
 
 <head>
+
     <!-- Head section of website-->
-    <title></title>
+
+    <title> </title>
+
 </head>
 
 <body>
+
     <!-- Body section of website -->
+
 </body>
 
 </html>
