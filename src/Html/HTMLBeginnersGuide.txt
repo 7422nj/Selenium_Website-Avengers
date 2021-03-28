@@ -1,0 +1,72 @@
+********* Important Things To Know About HTML *************************************************************************************
+
+HTML stands for HyperText Markup Language.
+It is used to design web pages using a markup language.
+HTML is the combination of Hypertext and Markup language.
+Hypertext defines the link between the web pages.
+A markup language is used to define the text document within tag which defines the structure of web pages.
+
+HTML is a markup language that is used by the browser to manipulate text, images, and other content
+to display it in the required format.
+
+********** Why You Should Use HTML? ************************************************************************************
+
+HTML helps to structure our website well.
+
+The way a skeleton system gives a structure to the human body in a similar manner HTML acts as a skeleton for a website,
+without it a website cannot be made. If you want to work as a Software Developer especially in the Web Development domain,
+then learning HTML is a must, because without knowledge of it you cannot build a website.
+
+Base for creating websites: HTML is the basic necessity a developer should know while building a website from scratch.
+Learn web development: HTML is the first step towards learning Web Development. Once you learn HTML, you can build simple,
+static websites very easily.
+Can become freelancer: Since web development has the best scope in freelancing,
+therefore learning HTML will surely help you to get the best deals of website development in the market.
+
+
+Basic Format: It is the basic format of create a simple web page.
+
+****** A Few Heads Up **************************************************************************************************
+
+HTML
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Head section of website-->
+    <title></title>
+</head>
+
+<body>
+    <!-- Body section of website -->
+</body>
+
+</html>
+
+****** Basic HTML Tags To Learn ****************************************************************************************************
+
+Example: Let’s see a small example of simple HTML page that display the heading and paragraph content.
+
+<!DOCTYPE html> <- Explains Your Document File Type
+
+<html> <- Opening of HTML File
+
+<head> <- Opening of The Header
+
+    <title> Title of Webpage </title> <- Title of Your Specific Website ( Site Name )
+
+</head> <- Closing of The Header
+
+<body> <- Opening of Body Tag
+
+    <h1> First Header  </h1>  [Main Header] <- 1st Header's Size Will Be Big
+    <h2> Second Header </h2>  [Sub Header]  <- 2nd Header's Size Will Be Medium
+    <h3> Third Header  </h3>  [Sub Header]  <- 3rd Header's Size Will Be Small
+
+<p> Enter A Paragraph Here </p> <- p Tag Allows You To Enter Paragraphs Inside
+
+<br> Give A Break Between The Sequence </br> <- br Tag Allows You To Give A Break Between Actions/Codes
+
+</body> <- Closing of Body Tag
+
+</html> <- Closing of HTML File
