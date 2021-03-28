@@ -50,7 +50,8 @@ Basic Format: It is the basic format of create a simple web page.
 
 ****** Basic HTML Tags To Learn ****************************************************************************************************
 
-Example: Let’s see a small example of simple HTML page that display the heading and paragraph content.
+Example: Let’s See A Small Example of Simple HTML Page
+
 
 <!DOCTYPE html> <- Explains Your Document File Type
 
