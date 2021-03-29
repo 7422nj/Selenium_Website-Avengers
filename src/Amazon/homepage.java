@@ -9,6 +9,8 @@ import org.openqa.selenium.support.How;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.awt.*;
+
 import static Amazon.amazonWebElements.*;
 
 
@@ -16,6 +18,18 @@ public class homepage {
 
     //Will Load A New Web Page In The Current Browser Window
     WebDriver driver;
+
+    //Robot Available for All Below Methods
+    Robot robot;
+
+    {
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+            System.out.println("\n*** Robot Unable To Perform Action ***");
+        }
+    }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +62,7 @@ public class homepage {
     public void checkSignUp() {
         // Enter product name
         driver.findElement(By.cssSelector("#ap_customer_name")).sendKeys("Pritam");
+
     }
 
     public void testCustomerService() throws InterruptedException {
