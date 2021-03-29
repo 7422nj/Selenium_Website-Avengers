@@ -2,22 +2,26 @@ package Amazon;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import static Amazon.amazonWebElements.*;
 
 
 public class homepage {
 
+    //Will Load A New Web Page In The Current Browser Window
     WebDriver driver;
-    String amazonUrl = "https://www.amazon.com/";
-    String productName = "Gloves";
-    String searchBoxLocator = "twotabsearchtextbox";
-    String searchButtonLocator = "nav-search-submit-button";
-    String searchBoxBlog = "#trending-now > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(13) > div:nth-child(1) > bsp-newsletter-module:nth-child(1) > div:nth-child(1) > form:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > label:nth-child(1) > input:nth-child(1)";
-    String searchButtonBlog = "/html/body/div[2]/main/div[3]/bsp-tabs/div/div[2]/div[1]/div/div/div/ul/li[13]/div/bsp-newsletter-module/div/form/div[2]/div[1]/button[1]";
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    //Performs Action Before Methods is Operated
     @BeforeMethod
     public void setUp() {
         String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
@@ -41,9 +45,21 @@ public class homepage {
         // Enter product name
         driver.findElement(By.cssSelector("#ap_customer_name")).sendKeys("Pritam");
     }
+
+    public void testCustomerService() throws InterruptedException {
+        driver.findElement(By.xpath(customerServiceButton)).click();
+        Thread.sleep(3000);
+        //We want the driver to find an element By -> pathName Then click that element
+
+    }
+
+    //Performs Action After Methods has Operated
     @AfterMethod
     public void tearDown() {
         driver.close();
         //driver.quit();
+
+
     }
 }
+

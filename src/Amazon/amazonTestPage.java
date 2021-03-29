@@ -29,4 +29,24 @@ public class amazonTestPage extends homepage{ //testClass extends homePage
 
     }
 
+    @Test
+
+    public  void testCustomerServicePage() throws InterruptedException {
+
+        //Method Made In Homepage Class
+        testCustomerService();                                                   //Action Method From HomePage Class
+
+        //This Is Our Expected Return Value
+        String expectedText = "Amazon.com Help: Help & Customer Service";        //ExpectedResult
+
+        //This Will Ask The Driver (Chrome) To Get The Title of The Page
+        String actualText = driver.getTitle();                                   //ActualResult
+
+        //Assume That I'm Assuming That X And Y Equals Same Value
+        Assert.assertEquals(actualText,expectedText,"\nTest Failed");    //This Will Test And Return Result
+
+
+    }
+
+
 }
