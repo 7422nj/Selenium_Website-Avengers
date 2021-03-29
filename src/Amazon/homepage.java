@@ -30,6 +30,8 @@ public class homepage {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.get(amazonUrl);
+
+
     }
 
     // Action Method
@@ -52,6 +54,7 @@ public class homepage {
         //We want the driver to find an element By -> pathName Then click that element
 
     }
+
 
     //Performs Action After Methods has Operated
     @AfterMethod
