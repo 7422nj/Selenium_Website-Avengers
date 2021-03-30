@@ -92,6 +92,11 @@ public class DatabaseConnectDirectly {
             //-> Creates a Statement object for sending SQL statements to the database.
 
         }
+        //The finally block always executes when the try block exits.
+        //This ensures that the finally block is executed even if an unexpected exception occurs.
+        //But finally is useful for more than just exception handling
+        //It allows the programmer to avoid having cleanup code accidentally bypassed by a return, continue, or break.
+        //Putting cleanup code in a finally block is always a good practice, even when no exceptions are anticipated.
     }
 }
 
