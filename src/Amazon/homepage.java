@@ -8,15 +8,24 @@ import org.testng.annotations.BeforeMethod;
 
 
 
+
+
 public class homepage {
 
     WebDriver driver;
+
+    //Web elements only -> id,class,linked text, css selector, xpath
     String amazonUrl = "https://www.amazon.com/";
     String productName = "Gloves";
     String searchBoxLocator = "twotabsearchtextbox";
     String searchButtonLocator = "nav-search-submit-button";
     String searchBoxBlog = "#trending-now > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(13) > div:nth-child(1) > bsp-newsletter-module:nth-child(1) > div:nth-child(1) > form:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > label:nth-child(1) > input:nth-child(1)";
     String searchButtonBlog = "/html/body/div[2]/main/div[3]/bsp-tabs/div/div[2]/div[1]/div/div/div/ul/li[13]/div/bsp-newsletter-module/div/form/div[2]/div[1]/button[1]";
+    String fashionLinkLocator = "//a[contains(text(),'Fashion')]";
+    String fashionWomenLink = "//img[@alt='The Trend Edit Women']";
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @BeforeMethod
     public void setUp() {
@@ -41,6 +50,13 @@ public class homepage {
         // Enter product name
         driver.findElement(By.cssSelector("#ap_customer_name")).sendKeys("Pritam");
     }
+    //Clicking on Fashion Link on Homepage then click on Womens clothing
+    public void clickFashionLink() throws InterruptedException {
+        driver.findElement(By.xpath(fashionLinkLocator)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(fashionWomenLink)).click();
+        Thread.sleep(3000);
+}
     @AfterMethod
     public void tearDown() {
         driver.close();

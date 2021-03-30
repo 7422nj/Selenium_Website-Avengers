@@ -28,5 +28,16 @@ public class amazonTestPage extends homepage{ //testClass extends homePage
 
 
     }
+    @Test
+
+    public void testFashionLink() throws InterruptedException {
+        clickFashionLink(); //Action method
+        Thread.sleep(3000);
+
+        String expectedText = "Amazon.com: The Women's Spring Trend Edit: Clothing, Shoes & Jewelry";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText,expectedText,"Test Failed");
+
+    }
 
 }
