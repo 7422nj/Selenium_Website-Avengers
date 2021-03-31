@@ -1,16 +1,23 @@
-package Amazon;
+package Amazon.GiftCards;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
+import static Amazon.GiftCards.GiftCardsWebElements.GiftCards;
 import static Amazon.amazonWebElements.*;
 
-public class amazonGiftCards {
+
+public class amazonGiftCards{
+
     //Will Load A New Web Page In The Current Browser Window
     WebDriver driver;
 
@@ -33,7 +40,7 @@ public class amazonGiftCards {
     //Performs Action Before Methods is Operated
     @BeforeMethod
     public void setUp() {
-        String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
+        String chromeDriverPath = "BrowserDriver/mac/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -54,7 +61,8 @@ public class amazonGiftCards {
     }
 
     // Action Method
-    public void eGiftCards(){
+    public void EGiftCards(){
+        driver.findElement(By.xpath(GiftCards)).click();
 
 
     }
