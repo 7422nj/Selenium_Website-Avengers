@@ -3,6 +3,7 @@ package Amazon;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -10,8 +11,7 @@ import java.awt.*;
 
 import static Amazon.amazonWebElements.*;
 
-public class homepage {
-
+public class AmazonBooks {
     //Will Load A New Web Page In The Current Browser Window
     WebDriver driver;
 
@@ -25,6 +25,14 @@ public class homepage {
             e.printStackTrace();
             System.out.println("\n*** Robot Unable To Perform Action ***");
         }
+    }
+
+    //Sleep extended ms->s
+    Sleeper sleep;
+
+    //Thread.sleep(1000); -> sleepFor(1); [ 1000 milliseconds = 1 second ]
+    public static void sleepFor(int seconds) throws InterruptedException {
+        Thread.sleep(seconds * 1000);
     }
 
 
@@ -49,23 +57,7 @@ public class homepage {
 
     // Action Method
     public void checkSearchBox() {
-        // Enter product name
-        driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
-        // click on searchButton
-        driver.findElement(By.id(searchButtonLocator)).click();
-    }
 
-    // Action Method
-    public void checkSignUp() {
-        // Enter product name
-        driver.findElement(By.xpath(TodayDealsLink)).click();
-
-    }
-
-    public void testCustomerService() throws InterruptedException {
-        //We want the driver to find an element By -> pathName Then click that element
-        driver.findElement(By.xpath(customerServiceButton)).click();
-        Thread.sleep(3000);
 
 
     }
@@ -82,6 +74,4 @@ public class homepage {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
-
-
 }
