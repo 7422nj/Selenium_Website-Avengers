@@ -38,15 +38,24 @@ public class BooksTestPage extends AmazonBooks {
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "\n*** Test Fail - Try Again ***");
 
-    }
-    //Devil in the White City pt 2 - Incognito Mode Then Confirm That Only The Title Displayed is From The Back Window
+    }//Devil in the White City pt 2 - Incognito Mode Then Confirm That Only The Title Displayed is From The Back Window
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void testIncognitoModeNewWindow() {
         IncognitoMode();
         String expectedText = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "\n*** Test Fail - Try Again ***");
 
+    }//Find a Book Then Add to Cart Then Open New Window Then Find New Book And Add to Cart And Confirm Added to Cart
+
+    @Test
+    public void testAdd2BooksWith2DifferentWindows() throws InterruptedException {
+        test2Books2Windows();
+        String expectedText = "Added to Cart";
+        String actualText = driver.findElement(By.xpath(addedToCartConfirmation)).getText();
+        Assert.assertEquals(actualText, expectedText, "\n*** Test Fail - Try Again ***");
+
     }
+
 }

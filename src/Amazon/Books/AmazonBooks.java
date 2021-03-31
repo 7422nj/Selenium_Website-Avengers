@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.server.handler.ImplicitlyWait;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -14,6 +15,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 
 import static Amazon.Books.BooksWebElements.*;
 
@@ -40,6 +42,9 @@ public class AmazonBooks {
     public static void sleepFor(int seconds) throws InterruptedException {
         Thread.sleep(seconds * 1000);
     }
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -181,11 +186,41 @@ public class AmazonBooks {
 
     }//
 
-    public void testBooks() {
-        String expectedText = "Amazon.com: Books";
-        driver.findElement(By.cssSelector("#nav-xshop > a:nth-child(7)")).click();
-        String actualText = driver.getTitle();
-        Assert.assertEquals(actualText, expectedText, "Page Title not match");
+    public void test2Books2Windows() throws InterruptedException {
+       driver.findElement(By.xpath(booksLink)).click();
+       robot.keyPress(KeyEvent.VK_DOWN);
+       robot.delay(300);
+       robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+       robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+       robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+       robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+       robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+       robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+        driver.findElement(By.xpath(faucianBargainBookLink)).click();
+        sleepFor(2);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.delay(300);
+        driver.findElement(By.xpath(addToCart)).click();
+        sleepFor(3);
+        WebDriver driver = new ChromeDriver();
+        //Implicit Wait
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //Open WebSite
+        driver.get(newWindowPage);
+        driver.manage().window().maximize();
+        //Find the date time picker control
+        sleepFor(5);
+        driver.findElement(By.xpath(addToCart)).click();
+        sleepFor(3);
+        driver.manage().window().setPosition(new Point(0, -2000));
 
 }
 
