@@ -16,7 +16,7 @@ public class amazonTestPage extends homepage{ //testClass extends homePage
 
     @Test //Always need a @Test on top of method to verify this method will be used for testing purposes
 
-    public void testExample(){ //Public void testName+Description(){
+    public void testExample() { //Public void testName+Description(){
 
         checkSearchBox(); //Call the method you want to test
 
@@ -28,7 +28,6 @@ public class amazonTestPage extends homepage{ //testClass extends homePage
 
 
     }
-
     @Test
 
     public  void testCustomerServicePage() throws InterruptedException {

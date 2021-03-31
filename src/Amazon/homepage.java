@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 import static Amazon.amazonWebElements.*;
 
@@ -66,9 +67,10 @@ public class homepage {
     }
 
     public void testCustomerService() throws InterruptedException {
+        //We want the driver to find an element By -> pathName Then click that element
         driver.findElement(By.xpath(customerServiceButton)).click();
         Thread.sleep(3000);
-        //We want the driver to find an element By -> pathName Then click that element
+
 
     }
 
@@ -79,7 +81,7 @@ public class homepage {
     @AfterMethod
     public void tearDown() {
         driver.close();
-        //driver.quit();
+        driver.quit();
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
