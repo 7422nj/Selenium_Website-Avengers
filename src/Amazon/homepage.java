@@ -66,13 +66,11 @@ public class homepage {
 
     }
 
-    public void testCustomerService() throws InterruptedException {
-        //We want the driver to find an element By -> pathName Then click that element
-        driver.findElement(By.xpath(customerServiceButton)).click();
-        Thread.sleep(3000);
+//    public void testCustomerService() throws InterruptedException {
+//        //We want the driver to find an element By -> pathName Then click that element
+//        driver.findElement(By.xpath(customerServiceButton)).click();
+//        Thread.sleep(3000);
 
-
-    }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

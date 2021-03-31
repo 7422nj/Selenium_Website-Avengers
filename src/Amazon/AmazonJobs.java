@@ -54,7 +54,11 @@ public class AmazonJobs {
     }
 
     // Action Method
-    public void findJobs() {
+    public void  FindCareersPage() {
+        driver.findElement(By.xpath(careers)).click();
+
+
+
 
     }
 
@@ -72,4 +76,3 @@ public class AmazonJobs {
     }
 }
 
-}

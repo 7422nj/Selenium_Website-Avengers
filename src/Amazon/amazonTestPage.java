@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*; //We will be using TestNG to test Amazon
 
-public class amazonTestPage extends homepage{ //testClass extends homePage
+public class amazonTestPage extends AmazonJobs { //testClass extends homePage
 
 
     @Test //Always need a @Test on top of method to verify this method will be used for testing purposes
@@ -30,10 +30,12 @@ public class amazonTestPage extends homepage{ //testClass extends homePage
     }
     @Test
 
-    public  void testCustomerServicePage() throws InterruptedException {
+    public void careers () throws InterruptedException {
 
         //Method Made In Homepage Class
-        testCustomerService();                                                   //Action Method From HomePage Class
+        FindCareersPage();
+
+        // Action Method From HomePage Class
 
         //This Is Our Expected Return Value
         String expectedText = "Amazon.com Help: Help & Customer Service";        //ExpectedResult
@@ -43,6 +45,14 @@ public class amazonTestPage extends homepage{ //testClass extends homePage
 
         //Assume That I'm Assuming That X And Y Equals Same Value
         Assert.assertEquals(actualText,expectedText,"\nTest Failed");    //This Will Test And Return Result
+
+
+
+
+
+
+
+
 
 
     }
