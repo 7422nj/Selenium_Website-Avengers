@@ -39,7 +39,7 @@ public class homepage {
     //Performs Action Before Methods is Operated
     @BeforeMethod
     public void setUp() {
-        String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
+        String chromeDriverPath = "BrowserDriver/mac/chromedriver";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
