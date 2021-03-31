@@ -15,6 +15,26 @@ public class amazonWebElements {
     public static final String searchBoxLocator = "twotabsearchtextbox";
     public static final String searchButtonLocator = "nav-search-submit-button";
     public static final String customerServiceButton = "//a[contains(text(),'Customer Service')]";
+
+
+    // womensNewArrival
+    public static final String fashionLink = "//div[@id='nav-xshop']/a[.='Fashion']";
+    public static final String womensNewArrivalLink = "[alt='Women\\'s New Arrivals']";
+    public static final String featuredNewArrivalThisMonthLink = "//span[.='Featured New Arrivals this Month']";
+    public static final String last30DaysLink = "//span[.='Last 30 days']";
+    public static final String womensShortSleeveLink = "//span[.=\"Women's Short Sleeve Button Front Solid Collar Polo Crop Tops T Shirt\"]";
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

@@ -56,6 +56,16 @@ public class amazonFashion {
 
     // Action Method
     public void womensNewArrivals(){
+        driver.findElement(By.xpath(fashionLink)).click();
+        driver.findElement(By.cssSelector(womensNewArrivalLink)).click();
+        driver.findElement(By.xpath(featuredNewArrivalThisMonthLink)).click();
+        driver.findElement(By.xpath(last30DaysLink)).click();
+        driver.findElement(By.xpath(womensShortSleeveLink)).click();
+
+
+
+
+
 
 
     }
