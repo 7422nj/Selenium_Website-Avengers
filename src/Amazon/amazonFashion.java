@@ -62,13 +62,62 @@ public class amazonFashion {
         driver.findElement(By.xpath(last30DaysLink)).click();
         driver.findElement(By.xpath(womensShortSleeveLink)).click();
 
+    }
 
 
-
-
-
+    public void dresses(){
+        driver.findElement(By.xpath(fashionLink)).click();
+        driver.findElement(By.xpath(dresseslink)).click();
+        driver.findElement(By.xpath(eligibileForFreeShipping)).click();
+        driver.findElement(By.xpath(price50to100)).click();
+        driver.findElement(By.xpath(dressStyle)).click();
+       driver.findElement(By.xpath(hemDressWithPockets)).click();
 
     }
+
+    public void salesAndDeals() throws InterruptedException {
+        driver.findElement(By.xpath(fashionLink)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(saleAndDeals)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(handbags)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(color)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(blackBag)).click();
+        Thread.sleep(3000);
+
+    }
+
+    public void shoes() throws InterruptedException {
+        driver.findElement(By.xpath(fashionLink)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(shoes)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(premiumBrands)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(shoeSize)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(sandals)).click();
+        Thread.sleep(3000);
+
+    }
+
+    public void tops() throws InterruptedException {
+        driver.findElement(By.xpath(fashionLink)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(tops)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(blousesAndShirts)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(generalSize)).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath(floralTop)).click();
+        Thread.sleep(3000);
+
+    }
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
