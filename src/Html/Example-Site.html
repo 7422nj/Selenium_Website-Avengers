@@ -40,7 +40,24 @@ div{
  p {
  color:#E42C3A;
  text-align:center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+   background-color:white;
+}
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+tr:nth-child(even) {
+  background-color:white;
+}
 
    </style>
 
@@ -73,6 +90,9 @@ div{
             allowfullscreen>
     </iframe>
 
+    <br>
+    <br>
+
     <p style="color:white" align="center">
         <em>
             It supports a number of browsers (Google Chrome 12+, Internet Explorer 7,8,9,10, Safari 5.1+, Opera 11.5,
@@ -90,13 +110,18 @@ div{
         </em>
     </p>
 
-
     <br>
-
 
     <label style="color:white" align="center">  Review Your Thoughts : </label>
 
     <textarea width="600" height="800" align="center"></textarea>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
 
 </div>
 
@@ -134,8 +159,40 @@ if (pos >= 0) { src = src.substr(0, pos); }
 obj.src = src + '&rad=' + date.getTime();
 return false; }
 </script>
+
+
+
 </form>
 
+<h2>PNT Team Leads</h2>
+
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Furqan Javed</td>
+        <td>Team 1</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Taniya Saprumadu</td>
+        <td>Team 3</td>
+        <td>Mexico</td>
+    </tr>
+    <tr>
+        <td>Alex Erdely</td>
+        <td>Team 2</td>
+        <td>Austria</td>
+    </tr>
+    <tr>
+        <td>Pritam Das</td>
+        <td>Team 4</td>
+        <td>UK</td>
+    </tr>
+</table>
 <!Commenting>
 
 </body>
